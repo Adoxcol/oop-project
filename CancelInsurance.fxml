@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="758.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.CancelInsuranceController">
+   <children>
+      <!-- Purple Sidebar -->
+      <VBox prefWidth="70.0" style="-fx-background-color: #800080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane prefHeight="50.0" prefWidth="50.0" />
+            <VBox spacing="20.0" style="-fx-padding: 20;">
+               <Button style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Dashboard" />
+               <Button style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Manage Operations" />
+               <Button style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Oversee Aspects" />
+            </VBox>
+         </children>
+      </VBox>
+
+      <!-- Main Content -->
+      <VBox layoutX="70.0" layoutY="20.0" spacing="20.0">
+         <children>
+            <Label style="-fx-text-fill: #800080; -fx-font-size: 24; -fx-font-weight: bold;" text="Insurance Company Operations" />
+         </children>
+      </VBox>
+      <Button layoutX="78.0" layoutY="324.0" onAction="#cancelInsurance" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Cancel Insurance" />
+      <Label layoutX="83.0" layoutY="73.0" prefHeight="17.0" prefWidth="477.0" text="&quot;Need to cancel insurance?Just fill in your info, specify the date, and send it.  Good luck!&quot;" />
+      <TextArea fx:id="CancelFeild" layoutX="78.0" layoutY="100.0" prefHeight="213.0" prefWidth="466.0" />
+      <Button layoutX="200.0" layoutY="324.0" onAction="#CD" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="826.0" prefWidth="1194.0" style="-fx-background-color: #7B4B94;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="insurance.FeedbackController">
+   <children>
+      <ListView fx:id="feedbackListView" layoutX="78.0" layoutY="150.0" prefHeight="200.0" prefWidth="1038.0" />
+      <TextArea fx:id="newFeedbackArea" layoutX="78.0" layoutY="370.0" prefHeight="200.0" prefWidth="1038.0" promptText="Enter your feedback here" />
+      <Button fx:id="submitFeedbackButton" layoutX="500.0" layoutY="580.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" text="Submit Feedback" onAction="#handleSubmitFeedback" style="-fx-background-color: #8E44AD; -fx-text-fill: white;"/>
+      <Button fx:id="dashboardButton" layoutX="78.0" layoutY="103.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="111.0" text="Dashboard" onAction="#handleDashboardButton" style="-fx-background-color: #8E44AD; -fx-text-fill: white;"/>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="863.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insurance.ContentCreatorDashboardController">
+   <children>
+      <Label layoutX="193.0" layoutY="55.0" prefHeight="104.0" prefWidth="882.0" text="Content Creator Dashboard">
+         <font>
+            <Font size="71.0" />
+         </font>
+      </Label>
+      <Button fx:id="AnalysisButton" layoutX="123.0" layoutY="235.0" mnemonicParsing="false" onAction="#openAnalysis" prefHeight="104.0" prefWidth="174.0" text="Analysis" />
+      <Button fx:id="FeedbackButton" layoutX="970.0" layoutY="472.0" mnemonicParsing="false" onAction="#openFeedback" prefHeight="104.0" prefWidth="174.0" text="Feedback" />
+      <Button fx:id="CampaignButton" layoutX="698.0" layoutY="472.0" mnemonicParsing="false" onAction="#openCampaigning" prefHeight="104.0" prefWidth="174.0" text="Campaign" />
+      <Button fx:id="CollaborationButton" layoutX="400.0" layoutY="472.0" mnemonicParsing="false" onAction="#openCollaboration" prefHeight="104.0" prefWidth="174.0" text="Collaboration" />
+      <Button fx:id="OutreachButton" layoutX="970.0" layoutY="235.0" mnemonicParsing="false" onAction="#openOutreach" prefHeight="104.0" prefWidth="174.0" text="Outreach" />
+      <Button fx:id="NewsLetterButton" layoutX="698.0" layoutY="235.0" mnemonicParsing="false" onAction="#openNewsLetter" prefHeight="104.0" prefWidth="174.0" text="NewsLetter" />
+      <Button fx:id="SocialMediaButton" layoutX="400.0" layoutY="235.0" mnemonicParsing="false" onAction="#openSocialMedia" prefHeight="104.0" prefWidth="174.0" text="Social Media" />
+      <Button fx:id="ScheduleButton" layoutX="123.0" layoutY="479.0" mnemonicParsing="false" onAction="#openSchedule" prefHeight="104.0" prefWidth="174.0" text="Schedule" />
+      <Button fx:id="logOutButton" layoutX="553.0" layoutY="698.0" mnemonicParsing="false" onAction="#logout" prefHeight="67.0" prefWidth="162.0" text="Logout" />
+   </children>
+</AnchorPane>

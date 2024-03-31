@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.AccessEmployeeRecordsController">
+    <VBox layoutX="70.0" layoutY="20.0" spacing="20.0">
+        <children>
+            <Label style="-fx-text-fill: #800080; -fx-font-size: 24; -fx-font-weight: bold;" text="Employee Records Access Management" />
+
+            <!-- Employee Records Access Section -->
+            <VBox spacing="10.0">
+                <Label style="-fx-text-fill: #800080; -fx-font-size: 18; -fx-font-weight: bold;" text="Employee Records Access" />
+
+                <!-- Buttons for employee records access -->
+                <HBox spacing="20.0">
+                    <Button onAction="#showSpecificEmployee" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Select Employee Records" />
+                    <Button onAction="#showAllEmployee" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="View Employee Records" />
+                    <Button onAction="#deleteSelectedRecord" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Delete Record" />
+                </HBox>
+
+                <!-- Table for displaying employee records -->
+                <TableView fx:id="employeeRecordsTable" prefHeight="400.0">
+                    <columns>
+                        <TableColumn fx:id="empID" prefWidth="100" text="Employee ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="employeeId" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="empName" prefWidth="200" text="Employee Name">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="employeeName" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="DOB" prefWidth="150" text="Date of Birth">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="dateOfBirth" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="empJob" prefWidth="150" text="Employee Job">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="employeeJob" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <!-- Add more columns as needed -->
+                    </columns>
+                </TableView>
+                
+                <!-- New "Back to Dashboard" button -->
+                <Button fx:id="backToDashboardButton" onAction="#backToDashboard" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Back to Dashboard" />
+                
+            </VBox>
+        </children>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="800.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.EmployeePerformanceController">
+    <children>
+        <!-- Purple Sidebar -->
+        <VBox fx:id="employeeRecordsSidebar" prefWidth="70.0" style="-fx-background-color: #800080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox spacing="20.0" style="-fx-padding: 20;" />
+            </children>
+        </VBox>
+
+        <!-- Main Content -->
+        <VBox fx:id="employeeRecordsMainContent" layoutX="70.0" layoutY="20.0" spacing="20.0">
+            <children>
+                <Label style="-fx-text-fill: #800080; -fx-font-size: 24; -fx-font-weight: bold;" text="Insurance Company Operations" />
+
+                <!-- Employee Performance Appraisal Section -->
+                <VBox fx:id="employeePerformanceSection" spacing="10.0">
+                    <Label style="-fx-text-fill: #800080; -fx-font-size: 18; -fx-font-weight: bold;" text="Employee Performance Appraisal" />
+
+                    <!-- Employee Appraisals TableView -->
+                    <TableView fx:id="employeeAppraisalsTable" prefHeight="400.0" prefWidth="559.0">
+                        <columns>
+                            <TableColumn fx:id="employeeIdColumn" prefWidth="75.0" text="Employee ID" />
+                            <TableColumn fx:id="employeeNameColumn" prefWidth="187.0" text="Employee Name" />
+                            <TableColumn fx:id="performanceColumn" prefWidth="159.0" text="Employee Performance" />
+                            <TableColumn fx:id="durationColumn" prefWidth="263.0" text="Duration" />
+                        </columns>
+                    </TableView>
+
+                    <!-- TextFields for Entering New Records -->
+                    <HBox spacing="10.0">
+                        <TextField fx:id="employeeIdField" promptText="Employee ID" />
+                        <TextField fx:id="employeeNameField" promptText="Employee Name" />
+                        <TextField fx:id="performanceField" promptText="Employee Performance" />
+                        <TextField fx:id="durationField" promptText="Duration" />
+                        <Button fx:id="addRecordBtn" onAction="#handleAddRecord" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Add Record" />
+                    </HBox>
+                </VBox>
+            </children>
+        </VBox>
+            <Button fx:id="backToDashboardBtn" layoutX="645.0" layoutY="637.0" onAction="#backToDashboardButtonClicked" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

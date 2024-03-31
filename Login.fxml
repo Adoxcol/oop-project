@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="853.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insurance.LoginController">
+   <children>
+      <ComboBox fx:id="roleComboBox" layoutX="355.0" layoutY="193.0" prefHeight="44.0" prefWidth="250.0" />
+      <TextField fx:id="usernameField" layoutX="355.0" layoutY="288.0" prefHeight="56.0" prefWidth="250.0" promptText="UserID" />
+      <PasswordField fx:id="passwordField" layoutX="355.0" layoutY="380.0" prefHeight="56.0" prefWidth="250.0" promptText="Password" />
+      <Button fx:id="loginButton" layoutX="409.0" layoutY="534.0" onAction="#handleLoginButtonAction" prefHeight="63.0" prefWidth="142.0" text="Log In">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

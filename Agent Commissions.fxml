@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="907.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.AgentCommissionsController">
+    <children>
+        <!-- Purple Sidebar -->
+        <VBox prefWidth="70.0" style="-fx-background-color: #800080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <StackPane prefHeight="50.0" prefWidth="50.0">
+                    <Label style="-fx-text-fill: #ffffff; -fx-font-size: 14;" text="Logo" />
+                </StackPane>
+                <VBox spacing="20.0" style="-fx-padding: 20;" />
+            </children>
+        </VBox>
+
+        <!-- Main Content -->
+        <VBox layoutX="70.0" layoutY="20.0" spacing="20.0">
+            <children>
+                <Label style="-fx-text-fill: #800080; -fx-font-size: 24; -fx-font-weight: bold;" text="Insurance Company Operations" />
+
+                <!-- Manage Agent Commissions Section -->
+                <VBox spacing="10.0">
+                    <Label style="-fx-text-fill: #800080; -fx-font-size: 18; -fx-font-weight: bold;" text="Manage Agent Commissions" />
+
+                    <!-- Buttons for commission management -->
+                    <HBox spacing="20.0">
+                        <TextField fx:id="agentNameField" promptText="Agent Name" />
+                        <TextField fx:id="commissionAmountField" promptText="Commission Amount" />
+                        <Button fx:id="addRecordBtn" onAction="#handleAddRecord" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Add Record" />
+                        <Button fx:id="clearFieldsBtn" onAction="#handleClearFields" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Clear Fields" />
+                    </HBox>
+
+                    <!-- TableView for displaying commission details -->
+                    <TableView fx:id="commissionsTable" prefHeight="300.0" prefWidth="749.0">
+                        <columns>
+                            <TableColumn fx:id="agentIdColumn" prefWidth="100" text="Agent ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="agentId" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="agentNameColumn" prefWidth="200" text="Agent Name">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="agentName" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="commissionAmountColumn" prefWidth="150" text="Commission Amount">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="commissionAmount" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <!-- Add more columns as needed -->
+                        </columns>
+                    </TableView>
+                </VBox>
+
+                <!-- Additional buttons for commission management -->
+                <HBox spacing="20.0">
+                    <Button fx:id="verifyApproveBtn" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Verify and Approve Commissions" />
+                    <Button fx:id="calculateCommissionsBtn" onAction="#handleCalculateCommissions" style="-fx-background-color: #800080; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Calculate Agent Commissions" />
+                </HBox>
+            </children>
+        </VBox>
+           <!-- Added "Back to Dashboard" button -->
+           <Button fx:id="backToDashboardButton" layoutX="115.0" layoutY="556.0" onAction="#backToDashboard" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

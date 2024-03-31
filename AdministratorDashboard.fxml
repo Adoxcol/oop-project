@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="499.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.DashboardController">
+    <children>
+        <!-- Purple Sidebar -->
+        <VBox prefWidth="70.0" style="-fx-background-color: #800080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox spacing="20.0" style="-fx-padding: 20;">
+                    <Label prefHeight="35.0" prefWidth="70.0" style="-fx-text-fill: #ffffff; -fx-font-size: 24; -fx-font-weight: bold;" text="IC" />
+                    <!-- IC stands for Insurance Company - you can replace it with your logo image or text -->
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- Main Content -->
+        <VBox alignment="CENTER" layoutX="70.0" spacing="20.0">
+            <children>
+                <Label prefHeight="35.0" prefWidth="406.0" style="-fx-text-fill: #800080; -fx-font-size: 24; -fx-font-weight: bold;" text="Insurance Company Operations" />
+      
+                <!-- Dashboard Buttons -->
+                <Button onAction="#handleCompanyOperations" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Company Operations" />
+                <Button onAction="#handleGenerateDistribute" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Generate and Distribute" />
+                <Button onAction="#handleAgentCommissions" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Agent Commissions" />
+                <Button onAction="#handleCustomerContact" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Customer Contact" />
+                <Button onAction="#handleReviewApprove" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Review and Approve" />
+                <Button onAction="#handleManageAppointments" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Manage Agent Appointment" />
+                <Button onAction="#handleSalesReport" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Sales Report" />
+                <Button onAction="#handleEmployeePerformance" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Employee Performance" />
+                <Button onAction="#handleSignOut" style="-fx-background-color: #ffffff; -fx-text-fill: #800080; -fx-font-weight: bold;" text="Sign Out" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

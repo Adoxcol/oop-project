@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insurance.EventOrganizationController">
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="10.0" layoutX="150.0" layoutY="50.0">
+         <children>
+            <TextField fx:id="eventNameField" promptText="Event Name" maxWidth="1.7976931348623157E308" />
+            <DatePicker fx:id="eventDatePicker" promptText="Date" />
+            <TextField fx:id="eventTimeField" promptText="Time" maxWidth="1.7976931348623157E308" />
+            <TextField fx:id="eventDemographicsField" promptText="Target Demographics" maxWidth="1.7976931348623157E308" />
+            <Button fx:id="sendInvitesButton" text="Send Invites" onAction="#handleSendInvites" maxWidth="1.7976931348623157E308" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
